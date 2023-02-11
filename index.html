@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi</title>
+    <link rel="stylesheet" href="color.css">
+    <link rel="shortcut icon" href="/img/kawaii-boiled-egg-free-vector.ico" type="image/x-icon">
+
+    <script src="https://kit.fontawesome.com/af2c3ea27a.js" crossorigin="anonymous"></script>
+    <script src="log.js"></script>
+</head>
+
+<body class="body">
+
+    <section class="Gardentamagochi"><!--Espacio donde esta el gif morado de mirellas-->
+
+        <div class="areatamagochi"><!--donde esta la imagen de las huellas de perro-->
+            <div class="score"> <!-- div que contiene a  los score o las barras de vida y food-->
+                <div id="food-score"><!--barra de food-->
+                    <p align="Center">
+                        <i class="fa-brands fa-apple"></i> Food: <progress id="foodbar" min="0" max="100"
+                            value="100"><!--Aqui esta el valor de la barra de vida 100 y el max que es 100 y tiene un id para poderlo manipular desde el js.Asi es con  todas las barras-->
+                        </progress>
+                    </p>
+                </div>
+
+                <div id="sleep-score"><!--barra de vida de dormir-->
+                    <p align="Center">
+                        <i class="fa-solid fa-moon"></i> Sleep: <progress id="sleepbar" min="0" max="100" value="100">
+                        </progress>
+                    </p>
+                </div>
+            </div>
+
+            <div class="card"><!--cartelera de instruc que contiene dentro el boton de play-->
+                <div class="bodycard">
+
+                    <div class="titlecard">
+                        <h1> <i class="fa-solid fa-paw"></i> Tamagotchi-Dog <i class="fa-solid fa-paw"></i> </h1>
+                    </div>
+                    <div class="textp">
+                        <p><i class="fa-solid fa-bone"></i> ¡Hola! soy Potchi tu nueva mascota y estoy muy feliz de que este aquí para cuidarme  
+                        <i class="fa-sharp fa-regular fa-face-kiss-wink-heart"></i></p>
+                        <p><i class="fa-solid fa-bone"></i> Para poder estar saludable necesito que me ayudes a mantener la barra de food <i
+                            class="fa-brands fa-apple"></i>  y la barra de sleep <i class="fa-solid fa-moon"></i> en <FONT COLOR="green">verde</FONT>.</p>
+                        <p><i class="fa-solid fa-bone"></i> Cuando alguna de estas barras tome un color <FONT COLOR="#868A08">mostaza</FONT>, es por que se me estan agotando las baterias y necesitare de tu ayuda <i class="fa-regular fa-face-sad-cry facecry"></i>.</p>
+                            <p><i class="fa-solid fa-bone"></i> <FONT COLOR="red">Importante</FONT> si las barras se encuentran en color <FONT COLOR="red">Rojo</FONT>  <i class="fa-sharp fa-solid fa-briefcase-medical help"></i> es por que estoy fatal asi que  !corre y ayudame¡, ya que estare mas del otro mundo que de este.</p>
+                    </div>
+
+                    <div>
+
+                        <button id="playButton" class="buttonplay" value="play" type="button" onclick="startGame()">Play
+                            <i class="fa-solid fa-play"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bodytamagochi"><!--el huevo del tamagoshi-->
+                
+                <div class="huellas">
+                    <i class="fa-solid fa-paw huella"></i> <i class="fa-solid fa-paw huella"></i>
+                    <i class="fa-solid fa-paw huella"></i> <i class="fa-solid fa-paw huella"></i>
+                    <i class="fa-solid fa-paw huella"></i> <i class="fa-solid fa-paw huella"></i>
+                    <i class="fa-solid fa-paw huella"></i> <i class="fa-solid fa-paw huella"></i>
+                    <i class="fa-solid fa-paw huella"></i> 
+                    
+                </div>
+
+                <div class="star">
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i> 
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                </div>
+
+
+                <div class="star1">
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i> 
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                    <i class="fa-regular fa-star starb"></i>
+                </div>
+
+                <div class="pantalla"><!--pantalla del tamagoshi-->
+                    <div id="Pet"><!--div que contiene la imagen del perro-->
+                        <!--This is the pet's image-->
+                        <p align="Center">
+                            <img class="Dogface" id="Dogface" src="./img/sprites/comer.gif"></img>
+                        </p>
+                    </div>
+                </div>
+                <div class="huellas1">
+                    <i class="fa-solid fa-paw huella"></i> <i class="fa-solid fa-paw huella"></i>
+                    <i class="fa-solid fa-paw huella"></i> <i class="fa-solid fa-paw huella"></i>
+                    <i class="fa-solid fa-paw huella"></i> <i class="fa-solid fa-paw huella"></i>
+                    <i class="fa-solid fa-paw huella"></i> <i class="fa-solid fa-paw huella"></i>
+                    <i class="fa-solid fa-paw huella"></i> 
+                </div>
+
+                <div class="button"><!--boton dar comida-->
+                    <button id="food-button" class="food" value="Food" type="button" onclick="darComida()">Food <i
+                            class="fa-brands fa-apple"></i>
+                    </button>
+
+                </div>
+                <div class="buttonsp"><!--boton dormir-->
+                    <button id="sleep-button" class="sleep" value="sleep" type="button" onclick="ponerDomir()">Sleep <i
+                            class="fa-solid fa-moon"></i>
+                    </button>
+                </div>
+
+            </div>
+    </section>
+</body>
+
+</html>
